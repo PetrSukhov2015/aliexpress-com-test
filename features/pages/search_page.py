@@ -48,3 +48,21 @@ class SearchPage(object):
 
 
 
+class SearchPageAndroid(object):
+
+    def __init__(self, driver):
+        self.driver = driver
+    def a_fill(self,text):
+        self.driver.find_element_by_id('com.alibaba.aliexpresshd:id/iv_close_poplayer').click()  # a_driver.back()
+        self.driver.find_element_by_id('com.alibaba.aliexpresshd:id/search_hint').click()
+        self.driver.find_element_by_id('com.alibaba.aliexpresshd:id/tv_tv2').click()
+        self.driver.find_element_by_id('com.alibaba.aliexpresshd:id/abs__search_src_text').send_keys(text)
+            #'iPhoneX')  # a_driver.find_element_by_id('com.alibaba.aliexpresshd:id/search_hint').send_keys('iPhoneX')
+        # a_driver.back()
+    def a_search(self):
+        self.driver.find_element_by_id('com.alibaba.aliexpresshd:id/abs__search_go_btn').click()
+
+    def a_check_result(self):
+        self.driver.find_element_by_id('com.alibaba.aliexpresshd:id/search_result_list').click()
+        print('search result exists')
+
