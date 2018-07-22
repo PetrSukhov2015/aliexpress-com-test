@@ -1,0 +1,12 @@
+git clone https://github.com/PetrSukhov2015/aliexpress-com-test.git
+
+
+python 3.6.5
+pip install selenium
+pip install Appium-Python-Client
+windows chrome driver path
+apk aliexpress path
+android settings
+
+
+behave features/search.feature
